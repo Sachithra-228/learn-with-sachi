@@ -1,0 +1,43 @@
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.stats-grid .stat-box {
+  background: #e3edfa !important;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(30, 80, 180, 0.10);
+  padding: 2rem 1.5rem;
+  min-width: 140px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #1a2340;
+  transform: translateX(-60px);
+  opacity: 0;
+  transition: transform 0.7s cubic-bezier(.6,.2,.2,1), opacity 0.7s cubic-bezier(.6,.2,.2,1);
+}
+.stats-grid .stat-box.in-view {
+  transform: translateX(0);
+  opacity: 1;
+}
+.stats-grid .stat-box:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.stats-grid .stat-box:nth-child(2) {
+  transition-delay: 0.3s;
+}
+.stats-grid .stat-box:nth-child(3) {
+  transition-delay: 0.5s;
+}
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stats-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  width: 100%;
+} 
