@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Career Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <span class="logo">
+                <span class="logo-blue">S</span><span class="logo-red">A</span><span class="logo-blue">C</span><span class="logo-blue">H</span><span class="logo-red">I</span>
+            </span>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="upload.html">Upload CV</a></li>
+                <li><a href="interview.html">Mock Interview</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="hero-under-logo">
+        <h2 class="hero-headline">Empowering Students, Interns, and Job Seekers to Succeed</h2>
+        <p class="hero-support">Transform your career journey with our comprehensive platform. Upload your CV, practice with mock interviews, and get ready for your dream job with personalized guidance and expert insights.</p>
+        <div class="hero-buttons">
+            <a href="upload.html" class="btn hero-btn-primary">Upload Your CV</a>
+            <a href="interview.html" class="btn hero-btn-secondary">Try Mock Interview</a>
+        </div>
+    </section>
+    <section class="typewriter-logo-section">
+        <span class="typewriter-logo forward">
+            <span class="logo-blue letter-1">S</span><span class="logo-red letter-2">A</span><span class="logo-blue letter-3">C</span><span class="logo-blue letter-4">H</span><span class="logo-red letter-5">I</span>
+        </span>
+    </section>
+    <section class="how-it-works-section">
+        <div class="how-video-flex">
+            <div class="how-bars">
+                <div class="how-bar left" data-animate><span class="how-step">1.</span> Upload your CV (PDF)</div>
+                <div class="how-bar right" data-animate><span class="how-step">2.</span> Receive feedback and tips</div>
+                <div class="how-bar left" data-animate><span class="how-step">3.</span> Practice with mock interview questions</div>
+                <div class="how-bar right" data-animate><span class="how-step">4.</span> Get ready for your dream job!</div>
+            </div>
+        </div>
+    </section>
+    <section class="stats-section">
+        <div class="stats-container">
+            <h2>Our Impact</h2>
+            <div class="stats-grid">
+                <div class="stat-box"><span class="stat-number" data-target="1200"></span><br>CVs Reviewed</div>
+                <div class="stat-box"><span class="stat-number" data-target="800"></span><br>Mock Interviews</div>
+                <div class="stat-box"><span class="stat-number" data-target="95" data-suffix="%"></span><br>User Satisfaction</div>
+            </div>
+        </div>
+    </section>
+    <section class="cta-banner">
+        <h2 class="cta-headline">Ready to boost your career?</h2>
+        <a href="upload.html" class="btn cta-btn-primary">Get Started Now</a>
+    </section>
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2>What Our Users Say</h2>
+        <blockquote>"SACHI helped me land my first internship!" – Priya S.</blockquote>
+        <blockquote>"The mock interviews were so realistic and helpful." – John D.</blockquote>
+    </section>
+    <!-- Blog/Resources -->
+    <section class="resources">
+        <h2>Career Resources</h2>
+        <ul>
+            <li><a href="#">How to Write a Winning CV</a></li>
+            <li><a href="#">Top 10 Interview Questions</a></li>
+            <li><a href="#">Tips for Virtual Interviews</a></li>
+        </ul>
+    </section>
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <details>
+            <summary>Is SACHI free to use?</summary>
+            <p>Yes, all our core features are free for students and job seekers.</p>
+        </details>
+        <details>
+            <summary>Can I upload my CV in Word format?</summary>
+            <p>Currently, we only accept PDF files for CV uploads.</p>
+        </details>
+        <details>
+            <summary>How do I prepare for a mock interview?</summary>
+            <p>Just click on 'Try Mock Interview' and follow the instructions!</p>
+        </details>
+    </section>
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <h2>Stay Updated</h2>
+        <form class="newsletter-form" action="#" method="post">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit" class="btn">Subscribe</button>
+        </form>
+    </section>
+    <!-- Featured Partners -->
+    <section class="partners">
+        <h2>Our Users Work At</h2>
+        <div class="partner-logos">
+            <span class="partner-logo">Company A</span>
+            <span class="partner-logo">Company B</span>
+            <span class="partner-logo">Company C</span>
+        </div>
+    </section>
+    <!-- Quick Links -->
+    <section class="quick-links">
+        <h2>Quick Links</h2>
+        <ul>
+            <li><a href="#">Download Sample CV</a></li>
+            <li><a href="#">Book a Live Interview</a></li>
+            <li><a href="#">Contact a Mentor</a></li>
+        </ul>
+    </section>
+    <!-- Accessibility Note -->
+    <section class="accessibility-note">
+        <h2>Accessibility</h2>
+        <p>We are committed to making SACHI accessible for everyone. <a href="#">Learn more</a></p>
+    </section>
+    <footer class="footer">
+        <div class="container footer-container">
+            <span>© 2024 <span class="logo"><span class="logo-blue">S</span><span class="logo-red">A</span><span class="logo-blue">C</span><span class="logo-blue">H</span><span class="logo-red">I</span></span></span>
+            <div class="social-links">
+                <a href="#" aria-label="Twitter">Twitter</a>
+                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                <a href="#" aria-label="Email">Email</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+      const logo = document.querySelector('.typewriter-logo');
+      let isForward = true;
+      setInterval(() => {
+        if (isForward) {
+          logo.classList.remove('forward');
+          logo.classList.add('reverse');
+        } else {
+          logo.classList.remove('reverse');
+          logo.classList.add('forward');
+        }
+        isForward = !isForward;
+      }, 6000);
+
+      // Fade in .how-bar elements on scroll with stagger
+      const bars = document.querySelectorAll('.how-bar[data-animate]');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const bar = entry.target;
+            setTimeout(() => {
+              bar.classList.add('fade-in');
+            }, parseInt(bar.dataset.index || 0) * 200);
+            observer.unobserve(bar);
+          }
+        });
+      }, { threshold: 0.4 });
+      bars.forEach((bar, i) => {
+        bar.dataset.index = i;
+        observer.observe(bar);
+      });
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Animated counters for Our Impact section
+      function animateCounter(el, target, suffix = '', duration = 1500) {
+        let start = 0;
+        let startTime = null;
+        function updateCounter(timestamp) {
+          if (!startTime) startTime = timestamp;
+          const progress = Math.min((timestamp - startTime) / duration, 1);
+          const value = Math.floor(progress * target);
+          el.textContent = value.toLocaleString() + suffix;
+          if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+          } else {
+            el.textContent = target.toLocaleString() + suffix;
+          }
+        }
+        requestAnimationFrame(updateCounter);
+      }
+      const statSection = document.querySelector('.stats-section');
+      const statNumbers = document.querySelectorAll('.stat-number');
+      const statBoxes = document.querySelectorAll('.stat-box');
+      const statsGrid = document.querySelector('.stats-grid');
+      let statsAnimated = false;
+      if (statSection && statNumbers.length) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting && !statsAnimated) {
+              statNumbers.forEach(el => {
+                const target = parseInt(el.dataset.target, 10) || 0;
+                const suffix = el.dataset.suffix || '';
+                animateCounter(el, target, suffix);
+              });
+              if (statsGrid) {
+                statsGrid.classList.add('stats-animate');
+                // Force reflow and delay to ensure animation triggers
+                setTimeout(() => {
+                  statBoxes.forEach(box => {
+                    box.classList.add('in-view');
+                  });
+                }, 50);
+              }
+              statsAnimated = true;
+              observer.unobserve(statSection);
+            }
+          });
+        }, { threshold: 0.4 });
+        observer.observe(statSection);
+      }
+    });
+    </script>
+</body>
+</html> 
