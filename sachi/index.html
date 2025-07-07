@@ -13,7 +13,12 @@
             <span class="logo">
                 <span class="logo-blue">S</span><span class="logo-red">A</span><span class="logo-blue">C</span><span class="logo-blue">H</span><span class="logo-red">I</span>
             </span>
-            <ul class="nav-links">
+            <button class="hamburger" id="hamburger-menu" aria-label="Open navigation" aria-controls="drawer-nav" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links" id="drawer-nav">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="upload.html">Upload CV</a></li>
                 <li><a href="interview.html">Mock Interview</a></li>
@@ -21,6 +26,7 @@
             </ul>
         </div>
     </nav>
+    <div class="drawer-overlay" id="drawer-overlay"></div>
     <section class="hero-under-logo">
         <h2 class="hero-headline">Empowering Students, Interns, and Job Seekers to Succeed</h2>
         <p class="hero-support">Transform your career journey with our comprehensive platform. Upload your CV, practice with mock interviews, and get ready for your dream job with personalized guidance and expert insights.</p>
@@ -212,6 +218,38 @@
         observer.observe(statSection);
       }
     });
+    </script>
+    <script>
+      // Hamburger menu and side-drawer functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.getElementById('hamburger-menu');
+        const drawerNav = document.getElementById('drawer-nav');
+        const overlay = document.getElementById('drawer-overlay');
+
+        function openDrawer() {
+          drawerNav.classList.add('open');
+          overlay.classList.add('active');
+          hamburger.setAttribute('aria-expanded', 'true');
+        }
+        function closeDrawer() {
+          drawerNav.classList.remove('open');
+          overlay.classList.remove('active');
+          hamburger.setAttribute('aria-expanded', 'false');
+        }
+
+        hamburger.addEventListener('click', function() {
+          if (drawerNav.classList.contains('open')) {
+            closeDrawer();
+          } else {
+            openDrawer();
+          }
+        });
+        overlay.addEventListener('click', closeDrawer);
+        // Optional: close drawer when a nav link is clicked (on mobile)
+        drawerNav.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', closeDrawer);
+        });
+      });
     </script>
 </body>
 </html> 
